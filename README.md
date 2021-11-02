@@ -126,16 +126,18 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1OLd35pgJX-L6vvIBMDmtJeXhM270B003/view?usp=sharing)
+[ERD Sample](https://drive.google.com/file/d/1OLd35pgJX-L6vvIBMDmtJeXhM270B003/view)
 <br>
 
 ***
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- High Quality Animations
+- Incorporating roles (User Auth) 
+- Comments and Subcomments
+- More Sleek Design
+- Api thhat provides meditative stories
 
 ***
 
