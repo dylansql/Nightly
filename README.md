@@ -86,13 +86,22 @@ The Nightly MVP will consist of 5 main features, a RESTful JSON API, Interactive
 src
 |__ assets/
       |__ fonts
-      |__ graphics
       |__ images
-      |__ mockups
+      |__ avatars
 |__ components/
       |__ Header.jsx
+      |__ Layout  
 |__ services/
-
+      |__ auth
+      |__ api.config
+      |__ Posts
+|__ screens/
+      |__ Login
+      |__ Landing
+      |__ Listing
+      |__ PostEdit
+      |__ PostDetail
+      |__ Signup
 ```
 
 #### Time Estimates
