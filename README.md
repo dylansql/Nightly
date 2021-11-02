@@ -63,23 +63,15 @@ The Nightly MVP will consist of 5 main features, a RESTful JSON API, Interactive
 
 ![Dummy Link](https://res.cloudinary.com/ddid7dngp/image/upload/v1635829036/Screen_Shot_2021-11-01_at_9.57.02_PM_fpbnxh.png)
 
-- Desktop Hero
+- Desktop Listings
 
-![Dummy Link](url)
+![Dummy Link](https://res.cloudinary.com/ddid7dngp/image/upload/v1635863560/Screen_Shot_2021-11-02_at_7.32.20_AM_psvibw.png)
 
-- Resource Index
+- Desktop Detail
 
-![Dummy Link](url)
+![Dummy Link](https://res.cloudinary.com/ddid7dngp/image/upload/v1635863642/Screen_Shot_2021-11-02_at_7.33.40_AM_izd9z6.png)
 
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+- Desktop Create
 
 #### Component Tree
 
