@@ -83,9 +83,7 @@ The Nightly MVP will consist of 5 main features, a RESTful JSON API, Interactive
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+[Component Tree Sample](https://res.cloudinary.com/ddid7dngp/image/upload/v1635863340/Screen_Shot_2021-11-02_at_7.28.14_AM_nbajt7.png)
 
 #### Component Architecture
 
