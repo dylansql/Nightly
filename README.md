@@ -32,25 +32,22 @@ The Nightly MVP will consist of 5 main features, a RESTful JSON API, Interactive
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- CRUD functionality
+- Complete by Deadline
+- Deliverable withh ruby back end
+- React Front end
+- Accomplish one or two post MVP
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | Front-End Framework|
+|   React Router   | Routing between application |
+| Ruby on Rails | Backend Framework |
+| Vanilla CSS | Front End Styling |
 
 <br>
 
@@ -138,6 +135,7 @@ src
 - Comments and Subcomments
 - More Sleek Design
 - Api thhat provides meditative stories
+- Night Mode Switch on screen
 
 ***
 
