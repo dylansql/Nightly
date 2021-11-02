@@ -60,11 +60,11 @@ The Nightly MVP will consist of 5 main features, a RESTful JSON API, Interactive
 
 > Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+![Desktop](https://res.cloudinary.com/ddid7dngp/image/upload/v1635829001/Screen_Shot_2021-11-01_at_9.56.27_PM_sobibc.png)
 
 - Desktop Landing
 
-![Dummy Link](url)
+![Dummy Link](https://res.cloudinary.com/ddid7dngp/image/upload/v1635829036/Screen_Shot_2021-11-01_at_9.57.02_PM_fpbnxh.png)
 
 - Desktop Hero
 
