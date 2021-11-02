@@ -126,7 +126,7 @@ src
 
 #### ERD Model
 
-[ERD Sample](https://drive.google.com/file/d/1OLd35pgJX-L6vvIBMDmtJeXhM270B003/view)
+[Model](https://drive.google.com/file/d/1OLd35pgJX-L6vvIBMDmtJeXhM270B003/view)
 <br>
 
 ***
