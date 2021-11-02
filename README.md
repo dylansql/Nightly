@@ -124,7 +124,8 @@ src
 
 #### ERD Model
 
-[Model](https://drive.google.com/file/d/1OLd35pgJX-L6vvIBMDmtJeXhM270B003/view)
+![Model](https://res.cloudinary.com/ddid7dngp/image/upload/v1635881278/Screen_Shot_2021-11-02_at_12.27.01_PM_atvezb.png)
+
 <br>
 
 ***
