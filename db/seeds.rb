@@ -14,37 +14,37 @@ Comment.destroy_all
 
 puts "#{User.count} users created"
 
-# 3.times do
-#   Post.create!(
-#     title: Faker::FunnyName,
-#     categorey: 'Sleepless Nights',
-#     image: 'https://picsum.photos/200',
-#     content: Faker::Quote,
-#     user: @admin
-#   )
-# end
+3.times do
+  Post.create!(
+    title: Faker::FunnyName,
+    categorey: 'Sleepless Nights',
+    image: 'https://picsum.photos/200',
+    content: Faker::Quote,
+    user: @admin
+  )
+end
 
-# 3.times do
-#   Post.create!(
-#     title: Faker::FunnyName,
-#     categorey: 'Sleep Advice',
-#     image: 'https://picsum.photos/200',
-#     content: Faker::Quote,
-#     user: @admin
-#   )
-# end
+3.times do
+  Post.create!(
+    title: Faker::FunnyName,
+    categorey: 'Sleep Advice',
+    image: 'https://picsum.photos/200',
+    content: Faker::Quote,
+    user: @admin
+  )
+end
 
-# 3.times do
-#   Post.create!(
-#     title: Faker::FunnyName,
-#     categorey: 'Somethings on My Mind',
-#     image: 'https://picsum.photos/200',
-#     content: Faker::Quote,
-#     user: @admin
-#   )
-# end
+3.times do
+  Post.create!(
+    title: Faker::FunnyName,
+    categorey: 'Somethings on My Mind',
+    image: 'https://picsum.photos/200',
+    content: Faker::Quote,
+    user: @admin
+  )
+end
 
-# puts "#{Post.count} posts created"
+puts "#{Post.count} posts created"
 
 # @good = Comment.create!(content: 'This is great information')
 

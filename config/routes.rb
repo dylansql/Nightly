@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get '/auth/verify', to: 'authentications#verify'
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
   resources :teachers
   
   resources :users
