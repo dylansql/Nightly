@@ -44,16 +44,16 @@ end
   )
 end
 
-puts "#{Post.count} users created"
+puts "#{Post.count} posts created"
 
-@good = Comment.create!(content: 'This is great information')
+# @good = Comment.create!(content: 'This is great information')
 
-@bad = Comment.create!(content: 'This was not great')
+# @bad = Comment.create!(content: 'This was not great')
 
-@soso = Comment.create!(content: 'This was decent')
+# @soso = Comment.create!(content: 'This was decent')
 
-Post.all.each do |post|
-  rand(1..3).times do
-    post.comments << Comment.all.sample
-  end
-end
+# Post.all.each do |post|
+#   rand(1..3).times do
+#     post.comments << Comment.all.sample
+#   end
+# end
