@@ -16,30 +16,30 @@ puts "#{User.count} users created"
 
 3.times do
   Post.create!(
-    title: Faker::FunnyName,
+    title: Faker::FunnyName.name,
     categorey: 'Sleepless Nights',
     image: 'https://picsum.photos/200',
-    content: Faker::Quote,
+    content: Faker::Quote.famous_last_words,
     user: @admin
   )
 end
 
 3.times do
   Post.create!(
-    title: Faker::FunnyName,
+    title: Faker::FunnyName.name,
     categorey: 'Sleep Advice',
     image: 'https://picsum.photos/200',
-    content: Faker::Quote,
+    content: Faker::Quote.famous_last_words,
     user: @admin
   )
 end
 
 3.times do
   Post.create!(
-    title: Faker::FunnyName,
+    title: Faker::FunnyName.name,
     categorey: 'Somethings on My Mind',
     image: 'https://picsum.photos/200',
-    content: Faker::Quote,
+    content: Faker::Quote.famous_last_words,
     user: @admin
   )
 end
