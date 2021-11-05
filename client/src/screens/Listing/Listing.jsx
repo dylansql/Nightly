@@ -8,7 +8,7 @@ export default function Listing({posts}) {
             <div className="button-selections">
                 <button>Sleep Nights?</button>
                 <button>Sleep Advice?</button>
-                <button>Somethings on My Mind</button>
+                <button>Something on Your Mind?</button>
             </div>
             {posts.map((post) => (
         <p key={post.id}>{post.title}</p>
