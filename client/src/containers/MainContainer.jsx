@@ -12,6 +12,7 @@ import CreatePost from '../screens/Create/CreatePost'
 import EditPost from '../screens/Edit/EditPost'
 import Layout from '../Layout/Layout';
 import Help from '../screens/Help/Help';
+import SignOut from '../screens/SignOut/SignOut'
 
 export default function MainContainer({currentUser}) {
 
@@ -75,11 +76,14 @@ export default function MainContainer({currentUser}) {
             <Route path='/users'>
                 {/* <Flavors flavors={flavors} /> */}
             </Route>
-            <Route path='/'>
+            <Route exact path='/'>
               <Landing />
             </Route>
             <Route exact path='/help'>
               <Help />
+            </Route>
+            <Route exact path='/signout'>
+              <SignOut />
             </Route>
         </Switch>
       </Layout>

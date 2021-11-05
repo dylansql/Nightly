@@ -13,8 +13,8 @@ export default function Nav(props) {
     const authenticatedOptions = (
         <>
         <nav className={ham ? 'showMenu' : 'menu'}>
-        <NavLink to="/">Nightly</NavLink>
-        <NavLink className="link menuItem" to="/posts">
+        <NavLink className="link menuItem" to="/posts">Main</NavLink>
+        <NavLink className="link menuItem" to="/posts/new">
           Create Post
         </NavLink>
         <NavLink className="link menuItem" to="/help">

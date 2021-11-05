@@ -58,9 +58,6 @@ function App() {
           <Route path='/'>
             <MainContainer currentUser={currentUser} />
           </Route>
-          {/* <Route exact path='/'>
-            <Landing />
-          </Route> */}
         </Switch>
     </div>
   );
