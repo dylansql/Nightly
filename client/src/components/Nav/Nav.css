@@ -5,7 +5,7 @@ nav {
     padding: 10px
 }
 
-.showMenu {
+/* .showMenu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,9 +22,9 @@ nav {
     padding-top: 80px;
     z-index:auto;
     box-shadow: 0 0 5px black;
-}
+} */
 
-.menu {
+/* .menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,7 +40,7 @@ nav {
     padding: 15px;
     padding-top: 80px;
     z-index: 5;
-}
+} */
 
 .hamburger button {
     margin: auto 20px auto 0;
@@ -48,10 +48,11 @@ nav {
     padding: 20px;
     border: none;
     font-size: 30px;
-    background: none;
+    background: gray;
     cursor: pointer;
     z-index: 6;
     color: black;
+    position: fixed;
 }
 
 .nav-links {
@@ -94,9 +95,12 @@ i {
     z-index:auto;
     transform: translateX(0);
     transition: transform 0.2s;
+    box-shadow: 0 0 5px black;
+    background: gray;
     position: fixed;
-    top: 60px;
+    top: 80px;
     right: 0px;
+    position: fixed;
 }
 
 .menu {
@@ -107,8 +111,10 @@ i {
     z-index: 5;
     transform: translateX(100%);
     transition: transform 0.2s;
+    box-shadow: 0 0 5px black;
+    background: gray;
     position: fixed;
-    top: 60px;
+    top: 80px;
     right: 0;
-    
 }
+

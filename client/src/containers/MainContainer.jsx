@@ -1,3 +1,4 @@
+import './MainContainer.css'
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 
@@ -60,12 +61,13 @@ export default function MainContainer({currentUser}) {
 
     return (
       <Layout currentUser={currentUser}>
+        <div className="main-container">
         <Switch>
             <Route path='/posts/:id/edit'>
                 <EditPost posts={posts} handlePostUpdate={handlePostUpdate} />
             </Route>
             <Route path='/posts/new'>
-                <CreatePost handlePostCreate={handlePostCreate} />
+                <CreatePost posts={posts} handlePostCreate={handlePostCreate} />
             </Route>
             <Route path='/posts/:id'>
                 <PostDetail posts={posts} handlePostDelete={handlePostDelete} />
@@ -86,6 +88,7 @@ export default function MainContainer({currentUser}) {
               <SignOut />
             </Route>
         </Switch>
+      </div>
       </Layout>
     )
 }

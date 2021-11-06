@@ -1,4 +1,5 @@
-.title {
+.main-container {
+    height: 85vh;
     justify-content: center;
     align-items: center;
     align-content: center;

@@ -1,0 +1,16 @@
+.result-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.button-select {
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.result-groups {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
