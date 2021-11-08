@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: indigo;
+    color: khaki;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    border-bottom: black;
+}
+
+.landing-button {
+    color: khaki;
+    background-color: black;
+    padding: 20px;
+    border-radius: 12px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+@media only screen 
+and (max-width : 600px) {
+    .landing{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .landing-button{
+        color: white;
+    }
+
+}
+

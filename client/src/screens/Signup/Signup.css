@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+.signupform {
+    height: 95vh;
+    background-color: indigo;
+    padding: 30px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: khaki;
+}

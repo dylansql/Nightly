@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+
+.signform {
+    background-color: indigo;
+    height: 95vh;
+    margin-top: -5px;
+    padding: 20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: khaki;
+}
