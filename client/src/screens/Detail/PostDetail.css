@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+
+
+.post-detail {
+    background-color: indigo;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    margin-top: -20px;
+    color: khaki;
+    height: 100vh;
+    width: 100%;
+}

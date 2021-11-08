@@ -1,6 +1,6 @@
 export default function Help() {
     return (
-        <div>
+        <div className="help-sum">
             <h1>Nightly</h1>
             <h3>An open-sourced platform 
                 that helps people find resources for

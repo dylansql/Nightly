@@ -3,6 +3,8 @@ import { useParams, Redirect, Link } from "react-router-dom";
 import { getOnePost, } from "../../services/posts";
 import { putPost } from "../../services/posts";
 
+import '../Edit/EditPost.css'
+
 
 
 export default function EditPost(props) {
@@ -43,7 +45,7 @@ export default function EditPost(props) {
     }
 
     return (
-        <div>
+        <div className="edit-post">
             <form className="post-create" onSubmit={handleSubmit} >
             <div className="first-option">
               <div>

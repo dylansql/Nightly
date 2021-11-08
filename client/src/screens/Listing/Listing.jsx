@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState }  from 'react'
+import '../Listing/Listing.css'
 
 export default function Listing({posts}) {
     const [category, setCategory ] = useState("")
 
     return (
-        <div className="button-select">
+        <div className="listing">
+            <div className="button-select">
             <button onClick={() => setCategory("Sleepless Nights")}>
             Sleepless Nights
             </button>
@@ -16,6 +18,7 @@ export default function Listing({posts}) {
             <button onClick={() => setCategory("Somethings on My Mind")}>
             Somethings on My Mind
             </button>
+            </div>
             <div className="result-groups">
             {
             category ? posts.filter((post)=> {

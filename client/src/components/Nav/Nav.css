@@ -55,6 +55,7 @@ i {
 .homepage {
     padding-left: 15px;
     text-decoration: none;
+    color: black;
 }
 
 .homepage a {
@@ -99,4 +100,5 @@ i {
 
 .link-welcome {
     margin-right: 10px;
+    color: black;
 }

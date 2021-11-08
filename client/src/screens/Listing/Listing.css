@@ -1,16 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
 .result-box {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: black 1px 2px 3px 2px;
+    background-color: rgb(119, 68, 155);
+    margin-bottom: 50px;
+    text-decoration: none;
 }
 
+.result-box * {
+    text-decoration: none;
+    color: khaki;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+
 .button-select {
-    margin-top: 30px;
     padding: 30px;
 }
 
 .result-groups {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 30px;
+    
 }
+
+.listing {
+    background-color: indigo;
+    height: fit-content;
+}
+
