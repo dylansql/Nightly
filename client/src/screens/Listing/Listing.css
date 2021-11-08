@@ -36,5 +36,6 @@
 .listing {
     background-color: indigo;
     height: fit-content;
+    margin-bottom: -30px;
 }
 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../../Layout/Layout';
+import '../Signin/Signin.css'
 
 export default function SignIn(props) {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ export default function SignIn(props) {
 
   return (
     <Layout>
+      <div className="signform">
     <form
       onSubmit={(e) => {
         e.preventDefault();
@@ -50,6 +52,7 @@ export default function SignIn(props) {
       <Link to='/signup'>Need an Account? Sign Up</Link>
       <button>Submit</button>
     </form>
+    </div>
     </Layout>
   );
 }

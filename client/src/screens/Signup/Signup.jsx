@@ -21,6 +21,7 @@ export default function SignUp(props) {
 
   return (
     <Layout>
+      <div className="signupform">
     <form
       onSubmit={(e) => {
         e.preventDefault();
@@ -61,6 +62,7 @@ export default function SignUp(props) {
       <Link to='/signin'>Already have an Account? Sign In</Link>
       <button>Submit</button>
     </form>
+    </div>
     </Layout>
   );
 }
