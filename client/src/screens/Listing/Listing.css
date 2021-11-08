@@ -39,3 +39,27 @@
     margin-bottom: -30px;
 }
 
+@media only screen 
+and (max-width : 600px) {
+    .button-select{
+        padding: 5px;
+        display: flex;
+    }
+    .result-box img {
+        height: 100px;
+        width: 100px;
+    }
+
+}
+
+@media only screen 
+and (max-width : 412px) {
+    .button-select{
+        padding: 5px;
+        display: flex;
+    }
+    .result-box div {
+        size: 100px;
+    }
+
+}

@@ -23,4 +23,16 @@
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
+@media only screen 
+and (max-width : 600px) {
+    .landing{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .landing-button{
+        color: white;
+    }
+
+}
 
