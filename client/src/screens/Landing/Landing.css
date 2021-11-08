@@ -1,6 +1,25 @@
-.title {
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 90vh;
+    background-color: indigo;
+    color: khaki;
+    font-family: 'Mochiy Pop P One', sans-serif;
 }
+
+.landing-button {
+    color: khaki;
+    background-color: black;
+    padding: 20px;
+    border-radius: 12px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+

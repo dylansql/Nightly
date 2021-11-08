@@ -6,12 +6,12 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
-    render json: @posts
+    render json: @posts, include: :comments
   end
 
   # GET /posts/1
   def show
-    render json: @post
+    render json: @post, include: :comments
   end
 
   # POST /posts
@@ -28,9 +28,9 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   def update
     if @post.update(post_params)
-      render json: @post
+      render json: @post, include: :comments
     else
-      render json: @post.errors, status: :unprocessable_entity
+      render json: @post.errors,  status: :unprocessable_entity
     end
   end
 

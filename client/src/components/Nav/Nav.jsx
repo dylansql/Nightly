@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Nav.css";
 
 export default function Nav(props) {
-    const { currentUser } = props;
+    const { currentUser, handleLogout } = props;
     const [ham, setHam] = useState(false)
 
   const toggleHamburger = () => {
@@ -11,7 +11,7 @@ export default function Nav(props) {
   }
 
     const authenticatedOptions = (
-        <>
+        <div class="auth-nav">
         <nav className={ham ? 'showMenu' : 'menu'}>
         <NavLink className="link menuItem" to="/posts">Main</NavLink>
         <NavLink className="link menuItem" to="/posts/new">
@@ -20,16 +20,16 @@ export default function Nav(props) {
         <NavLink className="link menuItem" to="/help">
           Help
         </NavLink>
-        <NavLink className="link menuItem" to="/signout">
+        <NavLink className="link menuItem" onClick={handleLogout} to="/">
           Sign Out
         </NavLink>
         </nav>
         <div className="ham-button">
           <button className="hamburger" onClick={toggleHamburger}>
-          <i className={ham ? 'far fa-arrow-alt-circle-up' : 'fas fa-arrow-circle-up'}></i>
+          <i>X</i>
           </button>
           </div>
-        </>
+        </div>
     )
     
     const unauthenticatedOptions = (
@@ -44,7 +44,7 @@ export default function Nav(props) {
           </nav>
           <div className="ham-button">
           <button className="hamburger" onClick={toggleHamburger}>
-          <i className={ham ? 'far fa-arrow-alt-circle-up' : 'fas fa-arrow-circle-up'}></i>
+          <i>X</i>
           </button>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function Nav(props) {
 
     return (
         <nav className="nav">
-          <div>
+          <div class="nav-auth">
             <NavLink to="/">
               <div className="homepage">
                 Nightly

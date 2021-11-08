@@ -14,8 +14,6 @@ export default function EditPost(props) {
         content: "",
     }); 
 
-    const { post } = props
-
     const [isUpdated, setUpdated] = useState(false);
     
     useEffect(() => {

@@ -1,11 +1,3 @@
-import './MainContainer.css'
-import { useState, useEffect } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
-
-import { deletePost, getAllPosts, postPost, putPost } from '../services/posts';
-import { deleteUser, getAllUsers, postUser, putUser } from '../services/users';
-import { deleteComment, getAllComments, postComment, putComment } from '../services/comments';
-
 import Listing from '../screens/Listing/Listing'
 import PostDetail from '../screens/Detail/PostDetail'
 import Landing from '../screens/Landing/Landing';
@@ -13,10 +5,27 @@ import CreatePost from '../screens/Create/CreatePost'
 import EditPost from '../screens/Edit/EditPost'
 import Layout from '../Layout/Layout';
 import Help from '../screens/Help/Help';
-import SignOut from '../screens/SignOut/SignOut'
 
-export default function MainContainer({currentUser}) {
+import '../screens/Landing/Landing'
+import '../screens/About Me/AboutMe.css'
+import '../screens/Create/CreatePost.css'
+import '../screens/Detail/PostDetail.css'
+import '../screens/Edit/EditPost.css'
+import '../screens/Help/Help.css'
+import '../screens/Listing/Listing.css'
+import '../screens/Signin/Signin.css'
+import '../screens/Signup/Signup.css'
 
+
+import { useState, useEffect } from 'react';
+import { Switch, Route, useHistory } from 'react-router-dom';
+
+import { deletePost, getAllPosts, postPost, putPost } from '../services/posts';
+import { deleteComment, getAllComments, postComment, putComment } from '../services/comments';
+
+
+export default function MainContainer({currentUser, handleLogout}) {
+    const [user, setUser] = useState()
     const [posts, setPosts] = useState([]);
     const [users, setUsers] = useState([]);
     const [comments, setComments] = useState([]);
@@ -59,8 +68,9 @@ export default function MainContainer({currentUser}) {
         setPosts((prevState) => prevState.filter((post) => post.id !== id));
       };
 
+
     return (
-      <Layout currentUser={currentUser}>
+      <Layout currentUser={currentUser} handleLogout={handleLogout} >
         <div className="main-container">
         <Switch>
             <Route path='/posts/:id/edit'>
@@ -83,9 +93,6 @@ export default function MainContainer({currentUser}) {
             </Route>
             <Route exact path='/help'>
               <Help />
-            </Route>
-            <Route exact path='/signout'>
-              <SignOut />
             </Route>
         </Switch>
       </div>

@@ -1,9 +1,9 @@
 import './App.css';
 import SignIn from './screens/Signin/SignIn';
 import SignUp from './screens/Signup/Signup';
-import Landing from './screens/Landing/Landing'
-import Layout from './Layout/Layout'
 import MainContainer from './containers/MainContainer'
+import SignOut from './screens/SignOut/SignOut';
+
 
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
@@ -39,12 +39,13 @@ function App() {
     setCurrentUser(userData);
     history.push('/');
   };
-
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
   };
+
+
 
   return (
     <div className='App'>
@@ -56,8 +57,11 @@ function App() {
             <SignUp handleRegister={handleRegister} />
           </Route>
           <Route path='/'>
-            <MainContainer currentUser={currentUser} />
+            <MainContainer currentUser={currentUser} handleLogout={handleLogout} />
           </Route>
+          <Route exact path='/signout'>
+              <SignOut handleLogout={handleLogout} />
+            </Route>
         </Switch>
     </div>
   );
