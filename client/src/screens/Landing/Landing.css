@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
 
-.landing {
+/* .landing {
     display: flex;
     flex-direction: column;
     height: 95vh;
@@ -10,8 +10,6 @@
     align-items: center;
     align-content: center;
     background-color: indigo;
-    color: khaki;
-    font-family: 'Mochiy Pop P One', sans-serif;
     border-bottom: black;
 }
 
@@ -33,6 +31,34 @@ and (max-width : 600px) {
     .landing-button{
         color: white;
     }
+    
+} */
+
+.landing {
+    display: flex;
+    height: 95vh;
+    flex-direction: column;
+    width: 100;
+    background: linear-gradient(to bottom, #4B5C77 0%, #4B5C77 50%, #525255 50%, #525255 100%);
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: white;
+}
+
+#title{
+    font-size: 130px;
+}
+
+#sub-title {
+    
+}
+
+.subtitle {
 
 }
 
+.title-side {
+    margin: 0 auto;
+    size: 200px;
+}

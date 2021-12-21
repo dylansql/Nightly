@@ -8,7 +8,7 @@ export default function Layout({currentUser, children, handleLogout}) {
         <div className="layout">
             <Nav currentUser={currentUser} handleLogout={handleLogout} />
             <div className="layout-children">{children}</div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }
