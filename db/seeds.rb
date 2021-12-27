@@ -39,7 +39,7 @@ end
     title: Faker::FunnyName.name,
     categorey: 'Somethings on My Mind',
     image: 'https://picsum.photos/200',
-    content: Faker::Quote.famous_last_words,
+    content: 'To be honest, I havent really been able to sleep because of the dreams that I have been getting lately. Does anyone have any advice?',
     user: @admin
   )
 end

@@ -8,97 +8,64 @@ nav {
     padding: 10px;
     text-decoration: none;
     font-family: 'Mochiy Pop P One', sans-serif;
-}
-
-
-.nav-auth a {
-    text-decoration: none;
-    color: black;
-}
-
-.hamburger button {
-    margin: auto 20px auto 0;
-    padding-right: 10px;
-    padding: 10px;
-    border: none;
-    font-size: 30px;
-    background: darkgray;
-    cursor: pointer;
-    z-index: 6;
-    color: black;
-    position: fixed;
-}
-
-
-
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    padding-right: 20px;
-    padding: 10px
-}
-
-i {
-    padding: 5px;
-    padding-right: 10px;
+    width: 100%;
+    border-bottom: 1px solid black;
 }
 
 .nav {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    background-color: gray;
+    background-color: #4B5C77;
     flex-direction: row;
     width: 100%;
 }
 
-.homepage {
-    padding-left: 15px;
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    margin-right: 80px;
+    padding: 10px;
+    border-bottom: none;
+}
+
+.nav-auth a {
     text-decoration: none;
     color: black;
 }
 
-.homepage a {
-    text-decoration: none;  
-}
-
-.ham-button {
-    z-index: 5;
-}
-
-.showMenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    z-index:auto;
-    transform: translateX(0);
-    transition: transform 0.2s;
-    box-shadow: 0 0 5px black;
-    background: gray;
-    position: fixed;
-    top: 66px;
-    right: 0px;
-    position: fixed;
-}
-
-.menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    z-index: 5;
-    transform: translateX(100%);
-    transition: transform 0.2s;
-    box-shadow: 0 0 5px black;
-    background: gray;
-    position: fixed;
-    top: 66px;
-    right: 0;
+.non-auth a {
+    text-decoration: none;
     color: black;
 }
 
-.link-welcome {
-    margin-right: 10px;
-    color: black;
+.non-auth {
+    border-bottom: none;
+    text-decoration: none;
 }
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+ }
+
+.nav-auth {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#signup-page a {
+    color: white;
+    background-color: black;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {  
+      .nav {
+          width: 100%;
+      }
+  }

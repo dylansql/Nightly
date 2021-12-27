@@ -4,49 +4,61 @@ import "./Nav.css";
 
 export default function Nav(props) {
     const { currentUser, handleLogout } = props;
-    const [ham, setHam] = useState(false)
 
-  const toggleHamburger = () => {
-    setHam(!ham)
-  }
 
     const authenticatedOptions = (
         <div class="auth-nav">
-        <nav className={ham ? 'showMenu' : 'menu'}>
-        <NavLink className="link menuItem" to="/posts">Main</NavLink>
-        <NavLink className="link menuItem" to="/posts/new">
-          Create Post
-        </NavLink>
-        <NavLink className="link menuItem" to="/help">
-          Help
-        </NavLink>
-        <NavLink className="link menuItem" onClick={handleLogout} to="/">
-          Sign Out
-        </NavLink>
-        </nav>
-        <div className="ham-button">
-          <button className="hamburger" onClick={toggleHamburger}>
-          <i>X</i>
-          </button>
-          </div>
+            <nav>
+                <ul class="nav nav-pills nav-fill">
+                  <li class="nav-item">
+                    <NavLink to="/help">
+                      <a class="nav-link active" aria-current="page" href="#">Help</a>
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink to="/posts/new">
+                      <a class="nav-link active" aria-current="page" href="#">Post</a>
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink to="/help">
+                      <a class="nav-link active" aria-current="page" href="#">Saved</a>
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink className='signout' onClick={handleLogout} to="/">
+                      <a class="nav-link" href="#">Sign Out</a>
+                    </NavLink>
+              </li>
+                </ul>
+            </nav>
         </div>
     )
     
     const unauthenticatedOptions = (
-        <div className="nav-heading">
-          <nav className={ham ? 'showMenu' : 'menu'}>
-            <NavLink className="link menuItem" to="/signup">
-              Sign Up
-            </NavLink>
-            <NavLink className="link menuItem" to="/signin">
-              Log In
-            </NavLink>
-          </nav>
-          <div className="ham-button">
-          <button className="hamburger" onClick={toggleHamburger}>
-          <i>X</i>
-          </button>
-          </div>
+        <div className="non-auth">
+          <ul class="nav nav-pills nav-fill">
+              <li class="nav-item">
+                <NavLink to="/help">
+                  <a class="nav-link active" aria-current="page" href="#">Help</a>
+                </NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink to="/posts">
+                  <a class="nav-link" href="#">Posts</a>
+                </NavLink>
+              </li>
+              <li class="nav-item">
+                <NavLink to="/signin">
+                  <a class="nav-link" href="#">Sign In</a>
+                </NavLink>
+              </li>
+              <li class="nav-item" id="signup-page">
+                <NavLink to="/signup">
+                  <a class="nav-link" href="#">Get Started</a>
+                </NavLink>
+              </li>
+            </ul>
         </div>
     )
 
@@ -68,3 +80,4 @@ export default function Nav(props) {
       );
 
 }
+
