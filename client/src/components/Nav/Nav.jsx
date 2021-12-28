@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 import "./Nav.css";
 
 export default function Nav(props) {
@@ -8,7 +8,6 @@ export default function Nav(props) {
 
     const authenticatedOptions = (
         <div class="auth-nav">
-            <nav>
                 <ul class="nav nav-pills nav-fill">
                   <li class="nav-item">
                     <NavLink to="/help">
@@ -29,9 +28,9 @@ export default function Nav(props) {
                     <NavLink className='signout' onClick={handleLogout} to="/">
                       <a class="nav-link" href="#">Sign Out</a>
                     </NavLink>
-              </li>
+                  </li>
                 </ul>
-            </nav>
+            
         </div>
     )
     
@@ -72,7 +71,7 @@ export default function Nav(props) {
             </NavLink>
           </div>
           <div className="nav-links">
-            {currentUser && <div className="link-welcome">Welcome, {currentUser.username}!</div>}
+            {currentUser && <div className="link-welcome"> Welcome, {currentUser.username}!</div>}
             {/* {alwaysOptions} */}
             {currentUser ? authenticatedOptions : unauthenticatedOptions}
           </div>

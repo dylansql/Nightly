@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
-
 nav {
     display: flex;
     flex-direction: row;
@@ -21,12 +20,14 @@ nav {
     width: 100%;
 }
 
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    margin-right: 80px;
-    padding: 10px;
-    border-bottom: none;
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.auth-nav a {
+    text-decoration: none;
+    color: black;
 }
 
 .nav-auth a {
@@ -39,17 +40,7 @@ nav {
     color: black;
 }
 
-.non-auth {
-    border-bottom: none;
-    text-decoration: none;
-}
-
 ul {
-    text-decoration: none;
-    list-style-type: none;
- }
-
-.nav-auth {
     text-decoration: none;
     list-style-type: none;
 }
@@ -61,11 +52,28 @@ ul {
     padding: 10px;
 }
 
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    margin-right: 80px;
+    padding: 10px;
+    text-decoration: none; 
+    border-bottom: none;
+}
+
+.link-welcome {
+    margin-top: 2vh;
+}
+.nav-link {
+    color: black;
+    text-decoration-style: none;
+}
+
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) {  
-      .nav {
-          width: 100%;
+and (min-device-width: 375px) 
+and (max-device-width: 812px) 
+and (-webkit-min-device-pixel-ratio: 3) {  
+    .nav {
+          width: 94.7vw;
       }
   }
