@@ -9,15 +9,21 @@ export default function Listing({posts}) {
     return (
         <div className="listing">
             <div className="button-select">
-            <button onClick={() => setCategory("Sleepless Nights")}>
-            Sleepless Nights
-            </button>
-            <button onClick={() => setCategory("Sleep Advice")}>
-            Sleep Advice
-            </button>
-            <button onClick={() => setCategory("Somethings on My Mind")}>
-            Somethings on My Mind
-            </button>
+                <div className='btn-option'>
+                        <button onClick={() => setCategory("Sleepless Nights")} id="btn">
+                            Sleepless Nights
+                        </button>
+                    </div>
+                <div className='btn-option'>
+                    <button onClick={() => setCategory("Sleep Advice")} id="btn">
+                        Sleep Advice
+                    </button>
+                </div>
+                <div className='btn-option'>
+                    <button onClick={() => setCategory("Somethings on My Mind")} id="btn">
+                        Somethings on My Mind
+                    </button>
+                </div>
             </div>
             <div className="result-groups">
             {
@@ -39,8 +45,7 @@ export default function Listing({posts}) {
                 </Link>
                 </div>
       ))}
-      </div>
-
+            </div>
         </div>
     )
 }

@@ -21,8 +21,32 @@
 
 
 .button-select {
-    padding: 30px;
+    display: flex;
+    justify-content: center;
+    
 }
+
+.btn-option {
+    margin-top: 5vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+#btn {
+    border: none;
+    background-color: inherit;
+    color: white;
+    font-size: 20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.listing {
+    background-color: #4B5C77;
+    height: fit-content;
+    margin-bottom: -30px;
+}
+
+
 
 .result-groups {
     display: flex;
@@ -31,12 +55,6 @@
     flex-wrap: wrap;
     margin: 30px;
     
-}
-
-.listing {
-    background-color: indigo;
-    height: fit-content;
-    margin-bottom: -30px;
 }
 
 @media only screen 
