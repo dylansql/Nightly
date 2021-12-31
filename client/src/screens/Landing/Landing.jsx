@@ -23,6 +23,7 @@ export default function Landing() {
     return (
         <div className="landing">
             <div className='title-side'>
+                {/* <header></header> */}
                 {/* <h1 id="title">Nightly</h1> */}
                 <h3 class="fixed"></h3>
                     <div class="word">

@@ -5,6 +5,8 @@ import '../Listing/Listing.css'
 
 export default function Listing({posts}) {
     const [category, setCategory ] = useState("")
+    
+    console.log("line 31", posts)
 
     return (
         <div className="listing">
@@ -27,22 +29,38 @@ export default function Listing({posts}) {
             </div>
             <div className="result-groups">
             {
-            category ? posts.filter((post)=> {
-                return category === post.categorey
-            }).map((post) => (
-                <div className="result-box" key={post.id} >
-                <Link to={`/posts/${post.id}`}>
-                <img src={post.image} style={{height: "250px", width: "250px"}} />
-                <p key={post.id}>{post.title}</p>
-                </Link>
+                category ? posts.filter((post)=> {
+                    return category === post.categorey
+                }).map((post) => (
+                    <div className="result-box" key={post.id}>
+                        <div className="post-div">
+                            <div className="post-img">
+                                <img src={post.image} alt={post.title} style={{height: "200px", width: "200px"}} />
+                            </div>
+                            <div className="post-description">
+                                <p key={post.id}>{post.title}</p>
+                                <p key={post.id}>{post.content}</p>
+                            </div>
+                            <div className="read-more">
+                                <Link to={`/posts/${post.id}`}> Read More </Link>
+                            </div>
+                    </div>
                 </div>
       )) : 
             posts.map((post) => (
-                <div className="result-box" key={post.id} >
-                <Link to={`/posts/${post.id}`}>
-                <img src={post.image} style={{height: "250px", width: "250px"}}/>
-                <p key={post.id}>{post.title}</p>
-                </Link>
+                <div className="result-box" key={post.id}>
+                    <div className="post-div">
+                            <div className="post-img">
+                                <img src={post.image} alt={post.title} style={{height: "200px", width: "200px"}} />
+                            </div>
+                            <div className="post-description">
+                                <p key={post.id}>{post.title}</p>
+                                <p key={post.id}>{post.content}</p>
+                            </div>
+                            <div className="read-more">
+                                <Link to={`/posts/${post.id}`}> Read More </Link>
+                            </div>
+                    </div>
                 </div>
       ))}
             </div>

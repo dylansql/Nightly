@@ -20,17 +20,24 @@ export default function PostDetail(props) {
 
     return (
         <div className="post-detail">
-
-            <h2>{postPage?.title}</h2>
-            <img src={postPage?.image} style={{height: "300px", width: "300px"}} />
-            <p>{postPage?.content}</p>
-            <Link to={`/posts/${postPage?.id}/edit`}><button>Edit</button></Link>
-            <Link to={`/posts`}><button onClick={() => handlePostDelete(postPage?.id)}>Delete</button></Link>
+            <div className="post-detail-container">
+              <div className="detail-image">
+                <img src={postPage?.image} style={{height: "400px", width: "400px"}} />
+              </div>
+              <div className="crud-functions">
+                <Link to={`/posts/${postPage?.id}/edit`}><button id="detail-btn">Edit</button></Link>
+                <Link to={`/posts`}><button onClick={() => handlePostDelete(postPage?.id)} id="detail-btn">Delete</button></Link>
+                </div>
+              <div className="detail-content">
+                <h2>{postPage?.title}</h2>
+                <p>{postPage?.content}</p>
+              </div>
             <div className="comments">
               <h2>Comments</h2>
             {postPage?.comments?.map((comment) => (
               <div>{comment.content}</div>
             ))}
+            </div>
             </div>
         </div>
     )

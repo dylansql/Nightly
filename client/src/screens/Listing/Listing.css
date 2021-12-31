@@ -1,24 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
-.result-box {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 30px;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: black 1px 2px 3px 2px;
-    background-color: rgb(119, 68, 155);
-    margin-bottom: 50px;
-    text-decoration: none;
-}
 
-.result-box * {
-    text-decoration: none;
-    color: khaki;
-    font-family: 'Mochiy Pop P One', sans-serif;
+.listing {
+    background-color: #4B5C77;
+    height: fit-content;
+    margin-bottom: -30px;
 }
-
 
 .button-select {
     display: flex;
@@ -40,21 +27,54 @@
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
-.listing {
-    background-color: #4B5C77;
-    height: fit-content;
-    margin-bottom: -30px;
+.post-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
+.result-box {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 20px;
+    /* box-shadow: black 1px 2px 3px 2px;
+    background-color: rgb(119, 68, 155); */
+    text-decoration: none;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    border-bottom: 1px solid black;
+}
 
+.result-box {
+    margin-bottom: 2vh;
+}
 
 .result-groups {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     margin: 30px;
-    
+}
+
+.result-box * {
+    text-decoration: none;
+    color: white;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.read-more {
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.post-description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 @media only screen 

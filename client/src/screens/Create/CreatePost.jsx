@@ -36,6 +36,7 @@ export default function CreatePost(props) {
         return <Redirect to={`/posts`} />;
       }
       console.log(formData)
+      
     return (
         <div className="addItem">
           <form className="post-create" onSubmit={handleSubmit} >
