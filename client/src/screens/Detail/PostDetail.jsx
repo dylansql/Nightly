@@ -69,9 +69,10 @@ export default function PostDetail(props) {
     //   }
     //   return users[i]
     // }
-    
-    // console.log("test", findUser())
 
+    console.log(postPage)
+
+    console.log(users)
  
     return (
         <div className="post-detail">
@@ -89,11 +90,15 @@ export default function PostDetail(props) {
               </div>
             <div className="comments">
               <h2>Comments</h2>
-            {postPage?.comments?.map((comment) => (
+            {postPage?.comments?.map((comment) => {
+                const blogger = users.filter((user)=> user.id === comment.user_id)
+                console.log(blogger)
+                return (
               <div className="comment-per-user">
+                <div>{blogger[0].username}</div>
                 <div>{comment.content}</div>
-              </div>
-            ))}
+              </div> 
+            )})}
             </div>
             <div>
               {/* <Link to={`/comments`}><button>Add Comment</button></Link> */}
