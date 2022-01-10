@@ -1,79 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&family=Shrikhand&display=swap');
 nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px;
+    list-style-type: none;
     text-decoration: none;
-    font-family: 'Mochiy Pop P One', sans-serif;
-    width: 100%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px black solid;
 }
 
 .nav {
-    align-items: center;
     display: flex;
-    justify-content: space-between;
-    background-color: #4B5C77;
-    flex-direction: row;
+    font-size: small;
+    justify-content: space-around;
+    text-decoration: none;
+    font-family: 'Shrikhand', cursive;
+    background: linear-gradient(180deg, #4A5597 0% 80%);
+    height: 10vh;
     width: 100%;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 3vw;
+}
+
+.nav a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.nav ul {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.nav-groups {
+    margin-right: 9vw;
 }
 
 .nav-link {
-    text-decoration: none;
-    color: black;
-}
-
-.auth-nav a {
-    text-decoration: none;
-    color: black;
-}
-
-.nav-auth a {
-    text-decoration: none;
-    color: black;
-}
-
-.non-auth a {
-    text-decoration: none;
-    color: black;
-}
-
-ul {
+    color: white;
     text-decoration: none;
     list-style-type: none;
 }
 
-#signup-page a {
+.homepage {
+    text-decoration: none;
+    margin-top: .5vh;
     color: white;
-    background-color: black;
+}
+
+#link a {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+
+#get-started {
+    background-color: #E989BB;
     border-radius: 25px;
-    padding: 10px;
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: row;
-    margin-right: 80px;
-    padding: 10px;
-    text-decoration: none; 
-    border-bottom: none;
-}
-
-.link-welcome {
-    margin-top: 2vh;
-}
-.nav-link {
+    padding: 5px;
     color: black;
-    text-decoration-style: none;
 }
 
 @media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) 
-and (-webkit-min-device-pixel-ratio: 3) {  
+and (min-width : 1224px) {
+
     .nav {
-          width: 94.7vw;
-      }
-  }
+        display: flex;
+        justify-content: space-between;
+        font-size: medium;
+        
+    }
+
+    .homepage {
+        margin-left: 3vw;
+    }
+    .nav-groups {
+        margin-top: 1.5vh;
+        margin-left: 10vw;
+    }
+
+}

@@ -10,7 +10,7 @@ export default function PostDetail(props) {
     const [postPage, setPostPage ] = useState(null)
     const { id } = useParams();
     const { handlePostDelete, currentUser, setRefresh, users } = props;
-    const [isCreated, setCreated] = useState(false); 
+    const [isCreated, setCreated] = useState(false);
     const [commentData, setCommentData] = useState({
       content: '',
     });
@@ -45,6 +45,7 @@ export default function PostDetail(props) {
         })
         setRefresh(prevState => !prevState) 
         setCreated(newComment)
+        window.location.reload()
       }
       
       if (isCreated) {

@@ -28,39 +28,43 @@ export default function SignUp(props) {
         handleRegister(formData);
       }}
     >
-      <h3>Sign Up</h3>
+      <h3 id="signup-title">WELCOME TO NIGHTLY</h3>
       <label>
-        Username:
         <input
           type='text'
           name='username'
+          placeholder='Username:'
           value={username}
           onChange={handleChange}
         />
       </label>
       <br />
       <label>
-        Email:
         <input 
         type='text' 
         name='email' 
+        placeholder='Email:'
         value={email} 
         onChange={handleChange}
         />
       </label>
       <br />
       <label>
-        Password:
         <input
           type='password'
           name='password'
+          placeholder='Create Password:'
           value={password}
           onChange={handleChange}
         />
       </label>
       <br />
+      <div className='signin-submit'>
+      <button>Signup</button>
+      </div>
+      <div className='signin'>
       <Link to='/signin'>Already have an Account? Sign In</Link>
-      <button>Submit</button>
+      </div>
     </form>
     </div>
     </Layout>

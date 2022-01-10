@@ -1,74 +1,16 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
-
-
-/* .landing {
-    display: flex;
-    flex-direction: column;
-    height: 95vh;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    background-color: indigo;
-    border-bottom: black;
-}
-
-.landing-button {
-    color: khaki;
-    background-color: black;
-    padding: 20px;
-    border-radius: 12px;
-    font-family: 'Mochiy Pop P One', sans-serif;
-}
-
-@media only screen 
-and (max-width : 600px) {
-    .landing{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .landing-button{
-        color: white;
-    }
-    
-} */
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto');/* @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
 
 .landing {
     display: flex;
-    height: 95vh;
+    height: 85vh;
     flex-direction: column;
     width: 100;
-    background: linear-gradient(to bottom, #4B5C77 0%, #4B5C77 50%, #525255 50%, #525255 100%);
+    background: linear-gradient(180deg, #4A5597 0%, #6348A7 10%, #C115E3 50%, #E900FD 85%, #dcdcdc 100%);
     justify-content: center;
     align-items: center;
-    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Shrikhand', cursive;
     color: white;
-}
-
-#title{
-    font-size: 130px;
-}
-
-#sub-title {
-    
-}
-
-.subtitle {
-
-}
-
-.title-side {
-    margin: 0 auto;
-    size: 200px;
-}
-
-
-@import url('https://fonts.googleapis.com/css?family=Anton|Roboto');
-
-.word {
-    font-family: 'Mochiy Pop P One', sans-serif;
-    perspective: 1000px; 
 }
 
 .word span {
@@ -172,30 +114,12 @@ and (max-width : 600px) {
   }
 }
 
-/* Other styles */
-/* body {
-  background-color: skyblue;
-  color: #fff;
-  display: flex;
-  font-family: 'Roboto', sans-serif;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  height: 100vh;
-  margin: 0;
-} */
-
 .fixed {
   position: fixed;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
 }
-
-
-
-
-
 
 .word span:nth-child(6).active {
     animation: falling 3s ease-out;
@@ -228,7 +152,6 @@ and (max-width : 600px) {
     }
 }
 
-
 .word span:nth-child(7).active {
     animation: shrinkjump 1s ease-in-out;
     transform-origin: bottom center;
@@ -248,51 +171,57 @@ and (max-width : 600px) {
     }
   }
 
-  .seperate-color button {
-      padding: 20px;
-        text-decoration: none;
+  .landing {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      width: 100%;
   }
-
-  .landing-button {
-    box-shadow: none;
-    font-family: 'Mochiy Pop P One', sans-serif;
-    border-radius: 60px;
-    background-color: black;
-    color: white;
-
+  
+  #title {
+      font-size: 55px;
+      font-family: 'Rock 3D', cursive;
   }
-
-
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .landing {
-        display: flex;
-        height: 100vh;
-        flex-direction: column;
-        width: 100%;
+  
+  
+  .word span:nth-child(5).active {
+      animation: toplong 2.2s linear;
     }
-
-
-
-    #title {
-        font-size: 55px;
-    }
-
-
-    .word span:nth-child(5).active {
-        animation: toplong 2.2s linear;
+    
+    @keyframes toplong {
+      10%, 40% {
+        transform: translateY(-25vh) scaleY(1);
       }
       
-      @keyframes toplong {
-        10%, 40% {
-          transform: translateY(-25vh) scaleY(1);
-        }
-        
-        90% {
-          transform: translateY(-25vh) scaleY(4);
-        }
+      90% {
+        transform: translateY(-25vh) scaleY(4);
       }
+    }
 
-}
+    .landing-button {
+      font-family: 'Shrikhand', cursive;
+      background-color: #E900FD;
+      border-radius: 15px;
+      border-style: none;
+      padding: 8px;
+      color: white;
+    }
+  
+  @media only screen 
+  and (min-width : 1224px) {
+
+    #title {
+      font-size: 150px;
+      font-family: 'Rock 3D', cursive;
+    }
+
+    .sub-title {
+      font-size: 25px;
+    }
+
+    .landing-button {
+      display: none;
+    }
+
+  }  
+

@@ -1,9 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
 .signupform {
-    height: 95vh;
-    background-color: indigo;
+    height: 90vh;
+    background: linear-gradient(180deg, #4A5597 0%, #6348A7 10%, #C115E3 50%, #E900FD 85%, #dcdcdc 100%);
     padding: 30px;
-    font-family: 'Mochiy Pop P One', sans-serif;
-    color: khaki;
+    font-family: 'Shrikhand', cursive;
+    color: black;
+}
+
+input {
+    color: black;
+    border: black;
+    padding: 10px;
+    width: 70vw;
+    border-radius: 30px;
+    background-color: #4A5597;
+    margin-top: 2vh;
+}
+
+input[type=text] {
+    background-color: #4A5597;
+    color: black;
+}
+
+::placeholder {
+    color: #000000;
+}
+
+#signup-title{
+    font-size: x-large;
+}
+
+.signin {
+    /* margin-top: 2vh; */
+}
+
+.signin-submit {
+    margin-top: 2vh;
+    padding: 10px;
+}
+
+.signin-submit button {
+    background-color: #E989BB;
+    font-family: 'Shrikhand', cursive;
+    padding: 5px;
+    border-radius: 40px;
+    width: 30vw;
+    margin-bottom: 2vh;
 }

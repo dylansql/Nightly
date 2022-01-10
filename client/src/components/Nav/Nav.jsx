@@ -36,28 +36,30 @@ export default function Nav(props) {
     
     const unauthenticatedOptions = (
         <div className="non-auth">
-          <ul class="nav nav-pills nav-fill">
-              <li class="nav-item">
-                <NavLink to="/help">
-                  <a class="nav-link active" aria-current="page" href="#">Help</a>
-                </NavLink>
-              </li>
-              <li class="nav-item">
-                <NavLink to="/posts">
-                  <a class="nav-link" href="#">Posts</a>
-                </NavLink>
-              </li>
-              <li class="nav-item">
-                <NavLink to="/signin">
-                  <a class="nav-link" href="#">Sign In</a>
-                </NavLink>
-              </li>
-              <li class="nav-item" id="signup-page">
-                <NavLink to="/signup">
-                  <a class="nav-link" href="#">Get Started</a>
-                </NavLink>
-              </li>
-            </ul>
+          <div className="nav-groups">
+              <ul class="nav">
+                  <li class="nav-item">
+                    <NavLink to="/help">
+                      <a class="nav-link" id="link" href="#">ABOUT</a>
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink to="/posts">
+                      <a class="nav-link" id="link" href="#">POSTS</a>
+                    </NavLink>
+                  </li>
+                  {/* <li class="nav-item">
+                    <NavLink to="/signin">
+                      <a class="nav-link" href="#">Sign In</a>
+                    </NavLink>
+                  </li> */}
+                  <li class="nav-item" id="link" id="signup-page">
+                    <NavLink to="/signup">
+                      <a class="nav-link" href="#" id="get-started">GET STARTED</a>
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
         </div>
     )
 
@@ -66,7 +68,7 @@ export default function Nav(props) {
           <div class="nav-auth">
             <NavLink to="/">
               <div className="homepage">
-                Nightly
+                NIGHTLY
               </div>
             </NavLink>
           </div>
