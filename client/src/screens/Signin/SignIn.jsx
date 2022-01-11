@@ -28,29 +28,31 @@ export default function SignIn(props) {
         handleLogin(formData);
       }}
     >
-      <h3>Login</h3>
+      <h3 id="signin-title">LOGIN</h3>
       <label>
-        Username:
         <input
           type='text'
           name='username'
+          placeholder='USERNAME:'
           value={username}
           onChange={handleChange}
         />
       </label>
       <br />
       <label>
-        Password:
         <input
           type='password'
           name='password'
+          placeholder='PASSWORD:'
           value={password}
           onChange={handleChange}
         />
       </label>
       <br />
+      <div className='signin-submit'>
+        <button>Submit</button>
+      </div>
       <Link to='/signup'>Need an Account? Sign Up</Link>
-      <button>Submit</button>
     </form>
     </div>
     </Layout>

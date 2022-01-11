@@ -39,6 +39,11 @@ nav {
     list-style-type: none;
 }
 
+.nav-links {
+    margin-top: .2vh;
+    background-color: none;
+}
+
 .homepage {
     text-decoration: none;
     margin-top: .5vh;
@@ -57,6 +62,16 @@ nav {
     padding: 5px;
     color: black;
 }
+
+
+.auth-in-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
 
 @media only screen 
 and (min-width : 1224px) {

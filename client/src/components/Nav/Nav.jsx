@@ -8,7 +8,7 @@ export default function Nav(props) {
 
     const authenticatedOptions = (
         <div class="auth-nav">
-                <ul class="nav nav-pills nav-fill">
+                <ul class="auth-in-nav">
                   <li class="nav-item">
                     <NavLink to="/help">
                       <a class="nav-link active" aria-current="page" href="#">Help</a>
