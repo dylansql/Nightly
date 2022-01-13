@@ -1,52 +1,65 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 import "./Nav.css";
 
 export default function Nav(props) {
     const { currentUser, handleLogout } = props;
-    const [ham, setHam] = useState(false)
 
-  const toggleHamburger = () => {
-    setHam(!ham)
-  }
 
     const authenticatedOptions = (
         <div class="auth-nav">
-        <nav className={ham ? 'showMenu' : 'menu'}>
-        <NavLink className="link menuItem" to="/posts">Main</NavLink>
-        <NavLink className="link menuItem" to="/posts/new">
-          Create Post
-        </NavLink>
-        <NavLink className="link menuItem" to="/help">
-          Help
-        </NavLink>
-        <NavLink className="link menuItem" onClick={handleLogout} to="/">
-          Sign Out
-        </NavLink>
-        </nav>
-        <div className="ham-button">
-          <button className="hamburger" onClick={toggleHamburger}>
-          <i>X</i>
-          </button>
-          </div>
+                <ul class="auth-in-nav">
+                  <li class="nav-item">
+                    <NavLink to="/help">
+                      <a class="nav-link active" aria-current="page" href="#">Help</a>
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink to="/posts/new">
+                      <a class="nav-link active" aria-current="page" href="#">Post</a>
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink to="/help">
+                      <a class="nav-link active" aria-current="page" href="#">Saved</a>
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink className='signout' onClick={handleLogout} to="/">
+                      <a class="nav-link" href="#">Sign Out</a>
+                    </NavLink>
+                  </li>
+                </ul>
+            
         </div>
     )
     
     const unauthenticatedOptions = (
-        <div className="nav-heading">
-          <nav className={ham ? 'showMenu' : 'menu'}>
-            <NavLink className="link menuItem" to="/signup">
-              Sign Up
-            </NavLink>
-            <NavLink className="link menuItem" to="/signin">
-              Log In
-            </NavLink>
-          </nav>
-          <div className="ham-button">
-          <button className="hamburger" onClick={toggleHamburger}>
-          <i>X</i>
-          </button>
-          </div>
+        <div className="non-auth">
+          <div className="nav-groups">
+              <ul class="nav">
+                  <li class="nav-item">
+                    <NavLink to="/help">
+                      <a class="nav-link" id="link" href="#">ABOUT</a>
+                    </NavLink>
+                  </li>
+                  <li class="nav-item">
+                    <NavLink to="/posts">
+                      <a class="nav-link" id="link" href="#">POSTS</a>
+                    </NavLink>
+                  </li>
+                  {/* <li class="nav-item">
+                    <NavLink to="/signin">
+                      <a class="nav-link" href="#">Sign In</a>
+                    </NavLink>
+                  </li> */}
+                  <li class="nav-item" id="link" id="signup-page">
+                    <NavLink to="/signup">
+                      <a class="nav-link" href="#" id="get-started">GET STARTED</a>
+                    </NavLink>
+                  </li>
+                </ul>
+              </div>
         </div>
     )
 
@@ -55,12 +68,12 @@ export default function Nav(props) {
           <div class="nav-auth">
             <NavLink to="/">
               <div className="homepage">
-                Nightly
+                NIGHTLY
               </div>
             </NavLink>
           </div>
           <div className="nav-links">
-            {currentUser && <div className="link-welcome">Welcome, {currentUser.username}!</div>}
+            {currentUser && <div className="link-welcome"> Welcome, {currentUser.username}!</div>}
             {/* {alwaysOptions} */}
             {currentUser ? authenticatedOptions : unauthenticatedOptions}
           </div>
@@ -68,3 +81,4 @@ export default function Nav(props) {
       );
 
 }
+

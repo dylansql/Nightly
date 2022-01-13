@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&family=Shrikhand&display=swap');
 
 .signform {
-    background-color: indigo;
-    height: 95vh;
-    margin-top: -5px;
+    background: linear-gradient(180deg, #4A5597 0%, #6348A7 10%, #C115E3 50%, #E900FD 85%, #dcdcdc 100%);
+    height: 90vh;
     padding: 20px;
-    font-family: 'Mochiy Pop P One', sans-serif;
-    color: khaki;
+    font-family: 'Shrikhand', cursive;
+    color: black;
+}
+
+.signin-submit {
+    
 }

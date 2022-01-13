@@ -36,6 +36,7 @@ export default function CreatePost(props) {
         return <Redirect to={`/posts`} />;
       }
       console.log(formData)
+      
     return (
         <div className="addItem">
           <form className="post-create" onSubmit={handleSubmit} >
@@ -76,28 +77,6 @@ export default function CreatePost(props) {
                   onChange={handleChange}
                 />
               </div>
-              {/* <div>
-                <h4>Location</h4>
-                <input
-                  className="input-location"
-                  placeholder="Zip Code"
-                  value={formData.content}
-                  name="location"
-                  required
-                  onChange={handleChange}
-                />
-              </div> */}
-            </div>
-            <div className="secondLine">
-              {/* <input
-                className="input-imgURL"
-                placeholder="Image URL"
-                value={item.imgURL}
-                name="imgURL"
-                required
-                onChange={handleChange}
-              /> */}
-              {/* <Image posts={posts} formData={formData} /> */}
             </div>
             <div className="thirdLine">
               <h4>Share Your Story</h4>

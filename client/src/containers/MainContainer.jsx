@@ -17,11 +17,15 @@ import '../screens/Signin/Signin.css'
 import '../screens/Signup/Signup.css'
 
 
+
+
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 
 import { deletePost, getAllPosts, postPost, putPost } from '../services/posts';
+import { getAllUsers } from '../services/users';
 import { deleteComment, getAllComments, postComment, putComment } from '../services/comments';
+import CreateComment from '../screens/CreateComments/CreateComment';
 
 
 export default function MainContainer({currentUser, handleLogout}) {
@@ -30,6 +34,9 @@ export default function MainContainer({currentUser, handleLogout}) {
     const [users, setUsers] = useState([]);
     const [comments, setComments] = useState([]);
     const history = useHistory();
+    const [refresh, setRefresh]= useState(false)
+
+
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -37,15 +44,23 @@ export default function MainContainer({currentUser, handleLogout}) {
           setPosts(postList);
         };
         fetchPosts();
-      }, []);
+      }, [refresh]);
+
+    useEffect(()=> {
+      const fetchUsers = async () => {
+        const userList = await getAllUsers();
+        setUsers(userList)
+      };
+      fetchUsers();
+    }, [refresh]);
     
-      useEffect(() => {
-        const fetchComments = async () => {
-          const commentList = await getAllComments();
-          setComments(commentList);
-        };
-        fetchComments();
-      }, []);
+      // useEffect(() => {
+      //   const fetchComments = async () => {
+      //     const commentList = await getAllComments();
+      //     setComments(commentList);
+      //   };
+      //   fetchComments();
+      // }, []);
     
       const handlePostCreate = async (formData) => {
         const newPost = await postPost(formData);
@@ -53,22 +68,34 @@ export default function MainContainer({currentUser, handleLogout}) {
         history.push('/posts');
       };
 
+      
       const handlePostUpdate = async (id, formData) => {
         const newPost = await putPost(id, formData);
         setPosts((prevState) =>
-          prevState.map((post) => {
-            return post.id === Number(id) ? newPost : post;
-          })
+        prevState.map((post) => {
+          return post.id === Number(id) ? newPost : post;
+        })
         );
         history.push('/posts');
       };
-
+      
       const handlePostDelete = async (id) => {
         await deletePost(id);
         setPosts((prevState) => prevState.filter((post) => post.id !== id));
       };
+      
+      // const handleCommentCreate = async (commentData) => {
+      //   const postBlogComment = await postComment(commentData);
+      //   setComments((prevState) => [...prevState, postBlogComment]);
+      //   history.push('/comments');
+      // }
 
-
+      // const handleAddCommentToPost = async (comment_id, id) => {
+      //   const newComment = await postComment(comment_id);
+      //   setComments((prevState) => [...prevState, newComment]);
+      //   history.push(`/comments/${comment_id}/posts/${id}`)
+      // };
+      
     return (
       <Layout currentUser={currentUser} handleLogout={handleLogout} >
         <div className="main-container">
@@ -80,7 +107,13 @@ export default function MainContainer({currentUser, handleLogout}) {
                 <CreatePost posts={posts} handlePostCreate={handlePostCreate} />
             </Route>
             <Route path='/posts/:id'>
-                <PostDetail posts={posts} handlePostDelete={handlePostDelete} />
+                <PostDetail posts={posts} handlePostDelete={handlePostDelete} 
+                // handleAddCommentToPost={handleAddCommentToPost}
+                // handleCommentCreate={handleCommentCreate} 
+                currentUser={currentUser}
+                setRefresh={setRefresh}
+                users={users}
+                />
             </Route>
             <Route path='/posts'>
                 <Listing posts={posts} />
@@ -94,6 +127,9 @@ export default function MainContainer({currentUser, handleLogout}) {
             <Route exact path='/help'>
               <Help />
             </Route>
+            {/* <Route path to='/comments/:comment_id/posts/:id'>
+              <CreateComment />
+            </Route> */}
         </Switch>
       </div>
       </Layout>

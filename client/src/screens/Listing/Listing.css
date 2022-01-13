@@ -1,65 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&family=Shrikhand&display=swap');
 
-.result-box {
+.listing {
     display: flex;
+    height: inherit;
+    width: 100%;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin: 30px;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: black 1px 2px 3px 2px;
-    background-color: rgb(119, 68, 155);
-    margin-bottom: 50px;
-    text-decoration: none;
+    font-family: 'Shrikhand', cursive;
+    background: linear-gradient(180deg, #4A5597 0%, #6348A7 5%, #C115E3 20%, #E900FD 40%, #9e3ba7 75%, #C115E3 80%, #6348A7 95%, #4A5597 100%);
 }
-
-.result-box * {
-    text-decoration: none;
-    color: khaki;
-    font-family: 'Mochiy Pop P One', sans-serif;
-}
-
 
 .button-select {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.btn-option {
+
+}
+
+#btn {
+    background-color: #E989BB;
+    font-family: 'Shrikhand', cursive;
+    font-size: small;
+    border-radius: 20px;
+    color: black;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+
+.result-box {
+    border: black 2px solid;
+    border-radius: 30px;
+    background: linear-gradient(180deg, #4A5597 0%, #6348A7 5%, #C115E3 20%, #E900FD 40%, #9e3ba7 75%, #C115E3 80%, #6348A7 95%, #4A5597 100%);
+    margin: 30px;
     padding: 30px;
 }
 
-.result-groups {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 30px;
-    
+.post-div {
 }
 
-.listing {
-    background-color: indigo;
-    height: fit-content;
-    margin-bottom: -30px;
-}
-
-@media only screen 
-and (max-width : 600px) {
-    .button-select{
-        padding: 5px;
-        display: flex;
-    }
-    .result-box img {
-        height: 100px;
-        width: 100px;
-    }
-
-}
-
-@media only screen 
-and (max-width : 412px) {
-    .button-select{
-        padding: 5px;
-        display: flex;
-    }
-    .result-box div {
-        size: 100px;
-    }
-
+.post-description {
+    overflow: scroll;
 }
