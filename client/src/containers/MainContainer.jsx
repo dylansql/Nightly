@@ -116,7 +116,7 @@ export default function MainContainer({currentUser, handleLogout}) {
                 />
             </Route>
             <Route path='/posts'>
-                <Listing posts={posts} />
+                <Listing posts={posts} users={users} />
             </Route>
             <Route path='/users'>
                 {/* <Flavors flavors={flavors} /> */}
