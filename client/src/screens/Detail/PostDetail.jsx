@@ -93,7 +93,6 @@ export default function PostDetail(props) {
               <h2>Comments</h2>
             {postPage?.comments?.map((comment) => {
                 const blogger = users.filter((user)=> user.id === comment.user_id)
-                console.log(blogger)
                 return (
               <div className="comment-per-user">
                 <div>{blogger[0].username}</div>
