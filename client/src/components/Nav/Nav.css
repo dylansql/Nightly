@@ -9,10 +9,9 @@ nav {
     display: flex;
     font-size: small;
     justify-content: space-around;
-    text-decoration: none;
     font-family: 'Shrikhand', cursive;
     background: linear-gradient(180deg, #4A5597 0% 80%);
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     align-items: center;
     text-decoration: none;
@@ -30,18 +29,25 @@ nav {
 }
 
 .nav-groups {
-    margin-right: 9vw;
+    display: flex;
+    flex-direction: row;
+    /* margin-right: 9vw; */
 }
 
+.nav-non-auth {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5vh;
+    margin-left: 2vw;
+}
+
+
 .nav-link {
+    margin-left: 1vw;
+    margin-right: 1vw;
     color: white;
     text-decoration: none;
     list-style-type: none;
-}
-
-.nav-links {
-    margin-top: .2vh;
-    background-color: none;
 }
 
 .homepage {
@@ -69,7 +75,26 @@ nav {
     flex-direction: row;
 }
 
+@media only screen 
+and (min-width : 414px) { 
+    .nav-groups {
+        margin-top: 2vh;
+    }
+}
 
+@media only screen 
+and (min-width : 390px) { 
+    .nav-groups {
+        margin-top: 2vh;
+    }
+}
+
+@media only screen 
+and (min-width : 375px) { 
+    .nav-groups {
+        margin-top: 2vh;
+    }
+}
 
 
 
@@ -90,5 +115,12 @@ and (min-width : 1224px) {
         margin-top: 1.5vh;
         margin-left: 10vw;
     }
-
+    .chart-room {
+        display: flex;
+        width: 50%;
+    }
+    .chat-title {
+        display: flex;
+        margin-right: 10vw;
+    }
 }

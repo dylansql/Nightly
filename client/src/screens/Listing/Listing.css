@@ -69,3 +69,58 @@
     display: flex;
     margin-left: 4vw;
 }
+
+@media only screen 
+and (min-width : 1224px) {
+    .listing {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main-container{
+
+    }
+    .chat-room {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15vh;
+        margin-right: 5vw;
+        width: 50vw;
+        height: 80vh;
+        background: linear-gradient(#525099 0%, #c32fd0cd 100%);
+    }
+    .result-box {
+        padding: 20px;
+        margin-left: 5vw;
+        height: 25vh;
+        width: 75%;
+    }
+
+    .chat-title {
+        display: flex;
+        margin-left: 10vw;
+        justify-content: center;
+    }
+    .channel-optn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FFFFFF;
+        border-bottom: 1px solid black;
+        font-size: x-small;
+    }
+    #channel-name {
+        margin-left: 2vw;
+
+    }
+    #channel-btn {
+        font-family: 'Shrikhand', cursive;
+        color: black;
+        background-color: #E989BB;
+        border-radius: 50px;
+        border: none;
+        padding: 10px;
+        margin-right: 2vw;
+        font-size: small;
+    }
+}

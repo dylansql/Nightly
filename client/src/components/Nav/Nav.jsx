@@ -37,7 +37,8 @@ export default function Nav(props) {
     const unauthenticatedOptions = (
         <div className="non-auth">
           <div className="nav-groups">
-              <ul class="nav">
+              <ul>
+                <div className="nav-non-auth">
                   <li class="nav-item">
                     <NavLink to="/help">
                       <a class="nav-link" id="link" href="#">ABOUT</a>
@@ -58,6 +59,7 @@ export default function Nav(props) {
                       <a class="nav-link" href="#" id="get-started">GET STARTED</a>
                     </NavLink>
                   </li>
+                  </div>
                 </ul>
               </div>
         </div>
