@@ -26,7 +26,11 @@ export default function Listing(props) {
 
     return (
         <div className="listing">
-            <div className="button-select">
+            <div className="main-container">
+                    <div className="post-component">
+                        <h1>Post Component</h1>           
+                    </div>
+                <div className="button-select">
                     <button onClick={() => setCategory("Sleepless Nights")} id="btn">
                         Sleepless Nights
                     </button>
@@ -40,7 +44,7 @@ export default function Listing(props) {
                     </button>
                 
             </div>
-            <div className="result-groups">
+                <div className="result-groups">
                 {
                     category ? posts.filter((post) => {
                         return category === (post.categorey)
@@ -92,6 +96,38 @@ export default function Listing(props) {
                                     </div>
                                 </div>
                             )})}
+                </div>
+            </div>
+            <div className="chat-room">
+                <div className='chat-title'>
+                    <h1>Join a chat</h1>
+                </div>
+                <div classNames="chat-channels">
+                    <div className='channel-optn'>
+                        <h1 id='channel-name'>Sleepless Nights</h1>
+                        <button id='channel-btn'>+Join</button>
+                    </div>
+                    <div className='channel-optn'>
+                        <h1 id='channel-name'>Sleep Advice</h1>
+                        <button id='channel-btn'>+Join</button>
+                    </div>
+                    <div className='channel-optn'>
+                        <h1 id='channel-name'>Somethings on My Mind</h1>
+                        <button id='channel-btn'>+Join</button>
+                    </div>
+                    <div className='channel-optn'>
+                        <h1 id='channel-name'>Mediate</h1>
+                        <button id='channel-btn'>+Join</button>
+                    </div>
+                    <div className='channel-optn'>
+                        <h1 id='channel-name'>Toy Stories</h1>
+                        <button id='channel-btn'>+Join</button>
+                    </div>
+                    <div className='channel-optn'>
+                        <h1 id='channel-name'>test</h1>
+                        <button id='channel-btn'>+Join</button>
+                    </div>
+                </div>
             </div>
         </div>
     )
