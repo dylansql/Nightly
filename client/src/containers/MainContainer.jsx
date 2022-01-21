@@ -5,6 +5,7 @@ import CreatePost from '../screens/Create/CreatePost'
 import EditPost from '../screens/Edit/EditPost'
 import Layout from '../Layout/Layout';
 import Help from '../screens/Help/Help';
+import NightlyChat from '../screens/Nightly-Chat/NightlyChat';
 
 import '../screens/Landing/Landing'
 import '../screens/About Me/AboutMe.css'
@@ -130,6 +131,9 @@ export default function MainContainer({currentUser, handleLogout}) {
             {/* <Route path to='/comments/:comment_id/posts/:id'>
               <CreateComment />
             </Route> */}
+            <Route exact path='/nightly-chat/:tag'>
+              <NightlyChat currentUser={currentUser} />
+            </Route>
         </Switch>
       </div>
       </Layout>
