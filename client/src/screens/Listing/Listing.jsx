@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 import '../Listing/Listing.css'
 
 export default function Listing(props) {
@@ -105,27 +106,39 @@ export default function Listing(props) {
                 <div classNames="chat-channels">
                     <div className='channel-optn'>
                         <h1 id='channel-name'>Sleepless Nights</h1>
-                        <button id='channel-btn'>+Join</button>
+                        <Link to={`/nightly-chat/Sleepless-Nights`}>
+                            <button id='channel-btn'>+Join</button>
+                        </Link>
                     </div>
                     <div className='channel-optn'>
                         <h1 id='channel-name'>Sleep Advice</h1>
-                        <button id='channel-btn'>+Join</button>
+                        <Link to={`/nightly-chat/Sleep-Advice`}>
+                            <button id='channel-btn'>+Join</button>
+                        </Link>
                     </div>
                     <div className='channel-optn'>
                         <h1 id='channel-name'>Somethings on My Mind</h1>
-                        <button id='channel-btn'>+Join</button>
+                        <Link to={`/nightly-chat/Something-On-My-Mind`}>
+                            <button id='channel-btn'>+Join</button>
+                        </Link>
                     </div>
                     <div className='channel-optn'>
                         <h1 id='channel-name'>Mediate</h1>
-                        <button id='channel-btn'>+Join</button>
+                        <Link to={`/nightly-chat/Meditate`}>
+                            <button id='channel-btn'>+Join</button>
+                        </Link>
                     </div>
                     <div className='channel-optn'>
                         <h1 id='channel-name'>Toy Stories</h1>
-                        <button id='channel-btn'>+Join</button>
+                        <Link to={`/nightly-chat/Toy-Stories`}>
+                            <button id='channel-btn'>+Join</button>
+                        </Link>
                     </div>
                     <div className='channel-optn'>
-                        <h1 id='channel-name'>test</h1>
-                        <button id='channel-btn'>+Join</button>
+                        <h1 id='channel-name'>Random Stuff</h1>
+                        <Link to={`/nightly-chat/RandomStuff`}>
+                            <button id='channel-btn'>+Join</button>
+                        </Link>
                     </div>
                 </div>
             </div>
