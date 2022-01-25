@@ -17,6 +17,22 @@ const io = new Server(httpServer, {
  app.get('/', (req, res) => {
      res.sendFile(__dirname + '/index.html');
     });
+
+
+
+
+
+
+
+    const messages = {
+    
+        "Sleepless-Nights": [],
+        "Sleep-Advice": [],
+        "Something-On-My-Mind": [],
+        "Meditate": [],
+        "Toy-Stories": [],
+        "RandomStuff": []
+    }
     
     io.on('connection', (socket) => {
         socket.emit('chat-message', 'BOT: Welcome to Nightly-Chat!');
@@ -27,12 +43,17 @@ const io = new Server(httpServer, {
         socket.on('disconnect', () => {
             socket.broadcast.emit('chat-message', 'BOT: A User has left the chat')
         })
-        socket.on('chat-message', ({ msg: msg, nickname: nickname}) => {
-            socket.emit('chat-message', `${nickname}: ${msg}`);
-            console.log(nickname)
-        });
+        socket.on('chat-message', ({ msg: msg, nickname: nickname, roomTag: tag}) => {
+            socket.join(tag)
+            io.to(tag).emit('chat-message', `${nickname}: ${msg}`);
 
+        });
     });
+
+
+
+
+
 
 httpServer.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
