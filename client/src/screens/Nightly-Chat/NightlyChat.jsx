@@ -8,43 +8,50 @@ const socket = io("http://localhost:3002")
 
 
 export default function NightlyChat(props) {
+
 const { currentUser } = props;
 const { tag } = useParams()
 const [msg, setMessage] = useState("")
 const [chat, setChat] = useState([])
-const [nickname, setNickName] = useState("");
+const [nickname, setNickname] = useState("");
+const [user, setUser] = useState("")
 
-const user = nanoid(4)
+// const user = nanoid(4)
 
-
-useEffect(() => {
-    socket.on("chat-message", (msg) => {
-        setChat([...chat, (msg)])
-        setNickName(currentUser?.username)
-    })
-}, []);
 
 const sendChat = (e) => {
     e.preventDefault()
-    socket.emit('chat-message', (nickname, msg))
-    // console.log('line 29',nickname)
-    setNickName("")
+    socket.emit('chat-message', {nickname: nickname, msg: msg})
     setMessage("")
 }
+useEffect(() => {
+    socket.on("chat-message", (payload) => {
+        setChat([...chat, payload])
+        setNickname(currentUser?.username)
+    })
+}, []);
+
+// useEffect(() => {
+//     socket.on("chat-message", (nickname) => {
+//         // setChat([...chat, (nickname)])
+//     })
+// }, []);
+
 
 return (
         <div>
             <h1>{tag}</h1>
-            {chat.map((msg, index) => {
+            {chat.map((payload, index) => {
+                console.log("line 45", payload)
                 return(
                     <div className="chat-li">
                         {/* {currentUser ? <div>{currentUser.username}</div> : <div>{user}</div>} */}
-                       <p key={index}>{msg}</p>
+                       <p key={index}>{payload}</p>
                     </div>
                 )
             })}
             <form onSubmit={sendChat}>
-                <input type="text" name="chat" placeholder="Say hello..." onChange={(e) => {
+                <input type="text" name="chat" placeholder="Type Something..." onChange={(e) => {
                     setMessage(e.target.value)
                 }}/>
                 <button type="submit">Send</button>

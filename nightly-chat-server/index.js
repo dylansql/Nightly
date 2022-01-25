@@ -14,46 +14,25 @@ const io = new Server(httpServer, {
     path:'/socket.io/'
  });
 
-let usernames = [];
- 
-const messages = {
-    SleeplessNights: [],
-    SleepAdvice: [],
-    SomethingsOnMyMind: [],
-    Meditate: [],
-    ToyStories: [],
-    Random: []
-}
-
  app.get('/', (req, res) => {
      res.sendFile(__dirname + '/index.html');
     });
     
     io.on('connection', (socket) => {
-        socket.emit('chat-message', 'Welcome to Nightly-Chat!');
+        socket.emit('chat-message', 'BOT: Welcome to Nightly-Chat!');
         
         // broadcasts when a user connect
-        socket.broadcast.emit('chat-message', `A User has joined the chat!`);
+        socket.broadcast.emit('chat-message', `BOT: A User has joined the chat!`);
         // runs when client disconnects
         socket.on('disconnect', () => {
-            socket.broadcast.emit('chat-message', 'A User has left the chat')
+            socket.broadcast.emit('chat-message', 'BOT: A User has left the chat')
         })
-
-        socket.on('chat-message', (msg, nickname) => {
-            socket.broadcast.emit('chat-message', `${nickname}: ${msg}`);
-            console.log("line 44", nickname)
+        socket.on('chat-message', ({ msg: msg, nickname: nickname}) => {
+            socket.emit('chat-message', `${nickname}: ${msg}`);
+            console.log(nickname)
         });
 
-
     });
-
-    
-
-
-
-
-
-
 
 httpServer.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
