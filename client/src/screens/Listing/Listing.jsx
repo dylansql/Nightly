@@ -7,23 +7,7 @@ import '../Listing/Listing.css'
 export default function Listing(props) {
     const [category, setCategory] = useState("")
     const { posts, users } = props;
-
-    // console.log("line 31", posts)
-
-    // const postUsername = () => {
-    //     let postCats = posts.map((post) => {
-    //     return post.id})
-    //     console.log(postCats)
-    //     let postUser = users.filter((user)=> user.id === postCats.user_id)
-    //     console.log(postUser[0].username)
-    // }
-    // postUsername();
-
-
-
-
-
-    
+  
 
     return (
         <div className="listing">

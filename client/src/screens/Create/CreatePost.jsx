@@ -35,7 +35,6 @@ export default function CreatePost(props) {
       if (isCreated) {
         return <Redirect to={`/posts`} />;
       }
-      console.log(formData)
       
     return (
         <div className="addItem">
