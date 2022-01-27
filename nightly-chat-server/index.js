@@ -9,11 +9,16 @@ const PORT = 3002 || process.env.PORT
 const httpServer = createServer();
 const io = new Server(httpServer, { 
     cors: {
-        origin: ["https://nightly-chat-server.herokuapp.com/", "https://nightlyy.netlify.app/"]
+        origin: ["https://nightly-chat-server.herokuapp.com/" || "https://nightlyy.netlify.app/"]
       },
       allowedHeaders: ["nightlyyy", "*"],
       path:'https://nightly-chat-server.herokuapp.com/',
       credentials: true
+    //   {
+    //     origin: "https://example.com",
+    //     allowedHeaders: ["my-custom-header"],
+    //     credentials: true
+    //   }
  });
 
  app.get('/', (req, res) => {
