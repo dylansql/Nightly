@@ -1,0 +1,26 @@
+.group-chat-container {
+    display: flex;
+    justify-content: center;
+    height: 95vh;
+}
+
+.chat-container {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-title {
+
+}
+
+.chat-box {
+    height: 50vh;
+    overflow: scroll;
+    border: black 1px solid;
+}
+
+#group-chat-box {
+
+}
+
