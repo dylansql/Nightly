@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react'
 import { io } from 'socket.io-client'
 import { useParams } from 'react-router-dom'
 
+const PORT = process.env.PORT 
 
-const socket = io(["http://localhost:3002", "https://nightlyy.netlify.app/"], {
+const socket = io(PORT, {
     withCredentials: true,
     extraHeaders: {
     "nightly": "true"

@@ -6,9 +6,11 @@ const cors = require("cors")
 const httpServer = createServer();
 const PORT = process.env.PORT || 3002
 
+// const production = "http://localhost:3001" || "https://nightlyy.netlify.app/"
+
 const io = new Server(httpServer, { 
     cors: {
-        origin: ["http://localhost:3001", "https://nightlyy.netlify.app/"],
+        origin: ["https://nightlyy.netlify.app/", "http://localhost:3001"],
         allowedHeaders: ["nightly"],
         credentials: true,
       }
