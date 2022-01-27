@@ -8,8 +8,6 @@ export default function Listing(props) {
     const [category, setCategory] = useState("")
     const { posts, users } = props;
 
-    console.log(users)
-
     return (
         <div className="listing">
             <div className="main-container">
@@ -60,7 +58,6 @@ export default function Listing(props) {
                     }) :
                          posts.map((post) => {
                             const postUser = users.filter((user)=> user.id === post.user_id)
-                            console.log(postUser)
                             return (
                                 <div className="result-box" key={post.id}>
                                     <div className="post-div">

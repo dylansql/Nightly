@@ -39,7 +39,6 @@ export default function CreateComment(props) {
       if (isCreated) {
           return <Redirect to={`/posts/${id}`} />
       }
-      console.log(commentData)
 
     return (
         <div>   
