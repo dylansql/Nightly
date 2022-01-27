@@ -11,8 +11,9 @@ const io = new Server(httpServer, {
     cors: {
         origin: ["https://nightly-chat-server.herokuapp.com/", "https://nightlyy.netlify.app/"]
       },
-    path:'https://nightly-chat-server.herokuapp.com/',
-    credentials: true
+      allowedHeaders: ["nightlyyy"],
+      path:'https://nightly-chat-server.herokuapp.com/',
+      credentials: true
  });
 
  app.get('/', (req, res) => {
