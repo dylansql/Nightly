@@ -4,13 +4,13 @@ const { createServer } = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors")
 const httpServer = createServer();
-const PORT = 3002 || process.env.PORT
+const PORT = process.env.PORT || 3002
 
-const production = "http://localhost:3001" || "https://nightlyy.netlify.app/"
+// const production = "http://localhost:3001" || "https://nightlyy.netlify.app/"
 
 const io = new Server(httpServer, { 
     cors: {
-        origin: [production],
+        origin: "http://localhost:3001" || "https://nightlyy.netlify.app/",
         allowedHeaders: ["nightly"],
         credentials: true,
       }
