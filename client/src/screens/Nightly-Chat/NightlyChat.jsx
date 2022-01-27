@@ -3,10 +3,12 @@ import { useState, useEffect } from 'react'
 import { io } from 'socket.io-client'
 import { useParams } from 'react-router-dom'
 
-const socket = io(["https://nightly-chat-server.herokuapp.com/"], {
+const PORT = process.env.PORT 
+
+const socket = io(PORT, {
     withCredentials: true,
     extraHeaders: {
-    "nightlyyy": "nightly"
+    "nightly": "true"
   }
 })
 
@@ -32,7 +34,6 @@ useEffect(() => {
         setChat([...chat, payload])
     })
 }, [msg]);
-
 
 return (
         <div className="group-chat-container">
