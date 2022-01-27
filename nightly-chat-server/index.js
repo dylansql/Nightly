@@ -15,6 +15,8 @@ const io = new Server(httpServer, {
     path:'https://nightly-chat-server.herokuapp.com/'
  });
 
+console.log(io)
+
  app.get('/', (req, res) => {
      res.sendFile(__dirname + '/index.html');
     });
