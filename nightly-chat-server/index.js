@@ -11,7 +11,7 @@ const io = new Server(httpServer, {
     cors: {
         origin: "*",
       },
-    path:'/socket.io/'
+    path:'https://nightly-chat-server.herokuapp.com/'
  });
 
  app.get('/', (req, res) => {
