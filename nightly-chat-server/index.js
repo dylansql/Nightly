@@ -4,12 +4,12 @@ const app = express();
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
-const PORT = 3002 || process.env.PORT
+const PORT = "https://nightly-chat-server.herokuapp.com/" || process.env.PORT
 
 const httpServer = createServer();
 const io = new Server(httpServer, { 
     cors: {
-        origin: ["https://nightly-chat-server.herokuapp.com/" || "https://nightlyy.netlify.app/"]
+        origin: ["https://nightly-chat-server.herokuapp.com/"]
       },
       allowedHeaders: ["nightlyyy"],
       path:'https://nightly-chat-server.herokuapp.com/',

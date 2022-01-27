@@ -8,11 +8,6 @@ const socket = io(["https://nightly-chat-server.herokuapp.com/"], {
     extraHeaders: {
     "nightlyyy": "nightly"
   }
-//   {
-//     withCredentials: true,
-//     extraHeaders: {
-//       "my-custom-header": "abcd"
-//     }
 })
 
 export default function NightlyChat(props) {
