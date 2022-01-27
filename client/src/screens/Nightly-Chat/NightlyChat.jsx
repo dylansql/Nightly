@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 import { io } from 'socket.io-client'
 import { useParams } from 'react-router-dom'
 
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 3002
 
-const socket = io(PORT, {
+const socket = io([PORT], {
     withCredentials: true,
     extraHeaders: {
     "nightly": "true"
