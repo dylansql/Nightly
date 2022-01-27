@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 const socket = io("https://nightly-chat-server.herokuapp.com/", {
     withCredentials: true,
     extraHeaders: {
-    "nightlyyy": "true"
+    "nightlyyy": "*"
   }
 })
 

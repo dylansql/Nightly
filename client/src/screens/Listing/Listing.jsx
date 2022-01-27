@@ -7,7 +7,8 @@ import '../Listing/Listing.css'
 export default function Listing(props) {
     const [category, setCategory] = useState("")
     const { posts, users } = props;
-  
+
+    console.log(users)
 
     return (
         <div className="listing">
