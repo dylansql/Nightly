@@ -19,8 +19,6 @@ export default function SignIn(props) {
     }));
   };
 
-  console.log(value)
-
   return (
     <Layout>
       <div className="signform">

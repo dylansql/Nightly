@@ -9,13 +9,11 @@ const PORT = 3002 || process.env.PORT
 const httpServer = createServer();
 const io = new Server(httpServer, { 
     cors: {
-        origin: ["https://nightly-chat-server.herokuapp.com/", "https://nightlyy.netlify.app/"],
+        origin: ["https://nightly-chat-server.herokuapp.com/", "https://nightlyy.netlify.app/"]
       },
-    credentials: true,
-    path:'https://nightly-chat-server.herokuapp.com/'
+    path:'https://nightly-chat-server.herokuapp.com/',
+    credentials: true
  });
-
-console.log(io)
 
  app.get('/', (req, res) => {
      res.sendFile(__dirname + '/index.html');
@@ -67,31 +65,3 @@ io.emit('some event', { someProperty: 'some value', otherProperty: 'other value'
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// io.on('connection', (socket) => {
-//     console.log('a user connected');
-//     socket.on('disconnect', () => {
-//       console.log('user disconnected');
-//     });
-//   });
-
-//   io.on('connection', (socket) => {
-//     socket.on('chat message', (msg) => {
-//       console.log('message: ' + msg);
-//     });
-//   });

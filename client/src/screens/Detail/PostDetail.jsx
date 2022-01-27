@@ -52,28 +52,8 @@ export default function PostDetail(props) {
         return <Redirect to={`/posts/${id}`} />
       }
 
-    // console.log(postPage.comments[0].user_id)
-
     
-    // const findUser = () => {
-    //   users.filter((user) => {
-    //     if (user.id === 57) {
-    //       return user.id
-    //     }
-    //   })
-    // } 
 
-    // for (let i = 0; i < users.length; i++ ) {
-      
-    //   if (users[i].id === 57) {
-    //     return users[i]
-    //   }
-    //   return users[i]
-    // }
-
-    console.log(postPage)
-
-    console.log(users)
  
     return (
         <div className="post-detail">
