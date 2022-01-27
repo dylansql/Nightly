@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { io } from 'socket.io-client'
 import { useParams } from 'react-router-dom'
 
-const socket = io(["https://nightly-chat-server.herokuapp.com/" || "https://nightlyy.netlify.app/"], {
+const socket = io(["https://nightly-chat-server.herokuapp.com/"], {
     withCredentials: true,
     extraHeaders: {
     "nightlyyy": "nightly"
