@@ -8,11 +8,9 @@ const httpServer = createServer();
 
 const PORT = process.env.PORT || 3002
 
-// const production = "http://localhost:3001" || "https://nightlyy.netlify.app/"
-
 const io = new Server(httpServer, { 
     cors: {
-        origin: "https://nightlyy.netlify.app/nightly-chat/",
+        origin: "https://nightlyy.netlify.app",
         allowedHeaders: ["nightly"],
         credentials: true,
       }
