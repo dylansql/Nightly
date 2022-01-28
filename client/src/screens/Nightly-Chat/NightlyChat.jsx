@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 const backend = "https://nightly-chat-server.herokuapp.com/";
 
 const socket = io(backend, {
+    transports : ['websocket'],
     withCredentials: true,
     extraHeaders: {
     "nightly": "true"

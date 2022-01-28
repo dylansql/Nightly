@@ -10,9 +10,7 @@ export default function CreateComment(props) {
     const [commentData, setCommentData] = useState({
         content: '',
     });
-    
     const { handleCommentCreate } = props
-    
     const { content } = commentData
 
     const handleChange = e => {
@@ -23,6 +21,7 @@ export default function CreateComment(props) {
         }));
     };
 
+    console.log(id)
 
     const handleSubmit = e => {
         e.preventDefault()
