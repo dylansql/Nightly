@@ -34,7 +34,6 @@ export default function CreateComment(props) {
         handleCommentCreate(id, commentData)
       }
 
-console.log(commentData)
 
       if (isCreated) {
           return <Redirect to={`/posts/${id}`} />
