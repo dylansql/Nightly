@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3002
 
 const io = new Server(httpServer, { 
     cors: {
-        origin: "http://localhost:3001" || "https://nightlyy.netlify.app/nightly-chat/",
+        origin: "https://nightlyy.netlify.app/nightly-chat/",
         allowedHeaders: ["nightly"],
         credentials: true,
       }
