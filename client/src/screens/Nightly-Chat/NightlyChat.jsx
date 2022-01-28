@@ -6,11 +6,10 @@ import { useParams } from 'react-router-dom'
 const backend = "https://nightly-chat-server.herokuapp.com/";
 
 const socket = io(backend, {
-    secure: true,
     withCredentials: true,
     extraHeaders: {
     "nightly": "true"
-  }
+  }, 
 })
 
 export default function NightlyChat(props) {

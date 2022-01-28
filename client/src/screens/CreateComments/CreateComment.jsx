@@ -23,17 +23,11 @@ export default function CreateComment(props) {
         }));
     };
 
-    // const handleSubmit = async (event) => {
-    //     event.preventDefault();
-    //     e.preventDefault()
-    //     handleCommentCreate(id, commentData)
-    // }
 
     const handleSubmit = e => {
         e.preventDefault()
         handleCommentCreate(id, commentData)
       }
-
 
       if (isCreated) {
           return <Redirect to={`/posts/${id}`} />
