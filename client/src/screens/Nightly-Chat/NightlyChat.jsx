@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react'
 import { io } from 'socket.io-client'
 import { useParams } from 'react-router-dom'
 
-const backend = "http://localhost:3002" || "https://nightly-chat-server.herokuapp.com/";
+const backend = "https://nightly-chat-server.herokuapp.com/";
 
 const socket = io(backend, {
+    secure: true,
     withCredentials: true,
     extraHeaders: {
     "nightly": "true"

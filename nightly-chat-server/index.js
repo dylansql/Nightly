@@ -1,16 +1,18 @@
 const express = require('express');
 const app = express();
-const { createServer } = require("http");
+const { createServer } = require("https");
 const { Server } = require("socket.io");
 const cors = require("cors")
+// const { readFileSync } = require("fs");
 const httpServer = createServer();
+
 const PORT = process.env.PORT || 3002
 
 // const production = "http://localhost:3001" || "https://nightlyy.netlify.app/"
 
 const io = new Server(httpServer, { 
     cors: {
-        origin: "http://localhost:3001" || "https://nightlyy.netlify.app/",
+        origin: "http://localhost:3001" || "https://nightlyy.netlify.app/nightly-chat/",
         allowedHeaders: ["nightly"],
         credentials: true,
       }
