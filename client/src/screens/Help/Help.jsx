@@ -1,3 +1,6 @@
+import Footer from '../../components/Footer/Footer'
+
+
 export default function Help() {
     return (
         <div className="help-sum">
@@ -30,6 +33,9 @@ export default function Help() {
                 others may be in. This is a safe space 
                 for others to vent about what keeps 
                 thems up at night. Please be respectful!!!</p>
+            </div>
+            <div className="footer">
+                <Footer />
             </div>
         </div>
     )

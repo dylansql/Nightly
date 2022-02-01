@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Redirect } from 'react-router';
+import Footer from '../../components/Footer/Footer'
 
 export default function CreatePost(props) {
     const [formData, setFormData ] = useState({
@@ -92,6 +93,9 @@ export default function CreatePost(props) {
               Submit
             </button>
           </form>
+          <div className="footer">
+                <Footer />
+            </div>
         </div>
     )
 }
