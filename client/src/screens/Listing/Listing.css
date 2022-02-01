@@ -34,8 +34,10 @@
     /* border: black 2px solid;
     border-bottom: none;
     border-radius: 30px; */
-    background: linear-gradient(blueviolet 0%, #E989BB 100%);
+    /* background: linear-gradient(blueviolet 0%, #E989BB 100%); */
+    background: #E989BB;
     padding: 30px;
+    margin: 30px;
 }
 
 .post-description {
@@ -69,6 +71,49 @@
     display: flex;
     margin-left: 4vw;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+    left: 0;
+    bottom: 0;
+}
+
+#last-item {
+    margin-bottom: 10vh;
+}
+
+.chat-room {
+    background: #E989BB;
+}
+
+.chat-title {
+    border-bottom: solid 2px black;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#channel-name {
+    font-size: x-large;
+}
+
+#channel-btn {
+    background-color: rgb(45, 217, 255);
+    border-radius: 15px;
+    padding: 15px;
+    color:black;
+}
+
+.result-groups {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+ 
 
 @media only screen 
 and (min-width : 1224px) {
@@ -109,10 +154,11 @@ and (min-width : 1224px) {
         border-bottom: 1px solid black;
         font-size: x-small;
     }
+
     #channel-name {
         margin-left: 2vw;
-
     }
+
     #channel-btn {
         font-family: 'Shrikhand', cursive;
         color: black;
@@ -122,5 +168,21 @@ and (min-width : 1224px) {
         padding: 10px;
         margin-right: 2vw;
         font-size: small;
+    }
+    
+    #btn {
+        padding: 10px;
+    }
+    
+    .footer {
+        display: none;
+    }
+    
+    .result-groups {
+        margin-top: 10vh;
+    }
+    
+    .button-select {
+        margin-top: 15vh;
     }
 }
